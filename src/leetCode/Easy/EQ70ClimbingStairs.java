@@ -1,4 +1,4 @@
-package leetCode;
+package leetCode.Easy;
 
 public class EQ70ClimbingStairs {
     static  int []term = new int [1000];

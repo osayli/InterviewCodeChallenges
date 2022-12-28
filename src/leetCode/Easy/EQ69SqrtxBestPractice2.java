@@ -1,4 +1,4 @@
-package leetCode;
+package leetCode.Easy;
 
 public class EQ69SqrtxBestPractice2 {
     public static  int mySqrt(int x){

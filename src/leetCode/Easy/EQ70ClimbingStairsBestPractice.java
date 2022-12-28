@@ -1,4 +1,4 @@
-package leetCode;
+package leetCode.Easy;
 
 public class EQ70ClimbingStairsBestPractice {
     public static int climbStairs(int n) {

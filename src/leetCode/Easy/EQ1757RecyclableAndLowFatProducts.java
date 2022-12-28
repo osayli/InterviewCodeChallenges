@@ -1,4 +1,4 @@
-package leetCode;
+package leetCode.Easy;
 
 public class EQ1757RecyclableAndLowFatProducts {
     /*

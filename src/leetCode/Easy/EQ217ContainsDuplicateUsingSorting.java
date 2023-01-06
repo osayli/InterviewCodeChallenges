@@ -1,8 +1,6 @@
 package leetCode.Easy;
 
 import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
 
 public class EQ217ContainsDuplicateUsingSorting {
     public static boolean containsDuplicate(int[] nums) {

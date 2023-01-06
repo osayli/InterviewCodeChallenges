@@ -1,6 +1,6 @@
 package leetCode.Easy;
 
-public class EQ69SqrtxBestPractice1 {
+public class EQ069SqrtxBestPractice1 {
 
     public static  int mySqrt(int x){
         long half=x/2;

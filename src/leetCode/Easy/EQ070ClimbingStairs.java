@@ -1,6 +1,6 @@
 package leetCode.Easy;
 
-public class EQ70ClimbingStairs {
+public class EQ070ClimbingStairs {
     static  int []term = new int [1000];
     public static int climbStairs(int n) {
         term[0]=1;

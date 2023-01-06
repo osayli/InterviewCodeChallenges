@@ -1,6 +1,6 @@
 package leetCode.Easy;
 
-public class EQ69SqrtxBestPractice2 {
+public class EQ069SqrtxBestPractice2 {
     public static  int mySqrt(int x){
         long r = x;
         while (r*r > x)

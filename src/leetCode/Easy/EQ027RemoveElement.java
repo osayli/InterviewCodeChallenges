@@ -2,7 +2,7 @@ package leetCode.Easy;
 
 import java.util.Arrays;
 
-public class EQ27RemoveElement {
+public class EQ027RemoveElement {
     /*
     Given an integer array nums and an integer val, remove all occurrences of val in nums in-place. The relative order of the elements may be changed.
 

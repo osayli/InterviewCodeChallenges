@@ -1,6 +1,6 @@
 package leetCode.Easy;
 
-public class EQ69Sqrtx{
+public class EQ069Sqrtx {
     public static int mySqrt(int x) {
         int result=(int) Math.sqrt(Integer.MAX_VALUE);
         for (int i =0; i <Math.sqrt(Integer.MAX_VALUE) ; i++) {

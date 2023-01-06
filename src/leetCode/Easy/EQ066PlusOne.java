@@ -2,7 +2,7 @@ package leetCode.Easy;
 
 import java.util.Arrays;
 
-public class EQ66PlusOne {
+public class EQ066PlusOne {
     public static int[] plusOne(int[] digits) {
         int carryOver=0;
         int[] result;

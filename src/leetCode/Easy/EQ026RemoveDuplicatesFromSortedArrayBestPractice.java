@@ -2,7 +2,7 @@ package leetCode.Easy;
 
 import java.util.Arrays;
 
-public class EQ26RemoveDuplicatesFromSortedArrayBestPractice {
+public class EQ026RemoveDuplicatesFromSortedArrayBestPractice {
         public static int removeDuplicates(int[] nums) {
             int insertIndex = 1;
             for(int i = 1; i < nums.length; i++){

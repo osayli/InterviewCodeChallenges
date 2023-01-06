@@ -2,7 +2,7 @@ package leetCode.Easy;
 
 import java.util.Arrays;
 
-public class EQ66PlusOneBestPractice {
+public class EQ066PlusOneBestPractice {
 
     public  static int[] plusOne(int[] digits){
         int n=digits.length;

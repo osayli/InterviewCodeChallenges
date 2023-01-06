@@ -1,6 +1,6 @@
 package leetCode.Easy;
 
-public class EQ70ClimbingStairsBestPractice {
+public class EQ070ClimbingStairsBestPractice {
     public static int climbStairs(int n) {
         int a = 1, b = 1;
         while (n-- > 0)

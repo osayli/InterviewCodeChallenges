@@ -2,7 +2,7 @@ package leetCode.Easy;
 
 import java.util.Stack;
 
-public class EQ20ValidParenthesesBestPractice {
+public class EQ020ValidParenthesesBestPractice {
     public static boolean isValid(String s) {
         Stack<Character> stack = new Stack<Character>();
         for (char c : s.toCharArray()) {

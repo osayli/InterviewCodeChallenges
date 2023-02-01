@@ -57,6 +57,8 @@ public class JavaStringsIntroduction {
         String b=scanner.nextLine();
         System.out.println(a.length()+b.length());
         int compare=a.compareTo(b);
+        String s=compare>0 ? "YES":"NO";
+        System.out.println(s);
         System.out.println(a.substring(0,1).toUpperCase()+a.substring(1)+
                 " "+b.substring(0,1).toUpperCase()+b.substring(1));
     }

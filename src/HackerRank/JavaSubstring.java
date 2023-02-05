@@ -1,7 +1,5 @@
 package HackerRank;
 
-import jdk.swing.interop.SwingInterOpUtils;
-
 import java.util.Scanner;
 
 /*

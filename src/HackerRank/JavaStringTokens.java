@@ -1,9 +1,12 @@
 package HackerRank;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 /*
-Given a string,s , matching the regular expression [A-Za-z !,?._'@]+, split the string into tokens. We define a token to be one or more consecutive English alphabetic letters. Then, print the number of tokens, followed by each token on a new line.
+Given a string,s , matching the regular expression [A-Za-z !,?._'@]+, split the string into tokens.
+ We define a token to be one or more consecutive English alphabetic letters.
+ Then, print the number of tokens, followed by each token on a new line.
 
 Note: You may find the String.split method helpful in completing this challenge.
 
@@ -48,7 +51,17 @@ We consider a token to be a contiguous segment of alphabetic characters. There a
 public class JavaStringTokens {
 
     public static void main(String[] args) {
-        Scanner scanner=new Scanner(System.in);
-        String s=scanner.nextLine();
+        //Scanner scanner=new Scanner(System.in);
+        //String s=scanner.nextLine();
+        String s="He is a very very good boy, isn't he?";
+        if(s.isBlank()){
+            System.out.println(0);
+        }else{
+            String[] tokens=s.trim().split("[ !,?._'@]+");
+            System.out.println(tokens.length);
+            for(String str:tokens){
+                System.out.println(str);
+            }
+        }
     }
 }

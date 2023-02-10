@@ -1,8 +1,6 @@
 package leetCode.Hard;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 /*
 ou are given an array of strings ideas that represents a list of names to be used in the
@@ -51,20 +49,26 @@ All the strings in ideas are unique.
 public class HQ2306NamingACompany {
 
     public static long distinctNames(String[] ideas) {
-        List<String> ls = new ArrayList<>(Arrays.asList(ideas));
-        long ans=0;
-        for (int left = 0; left < ls.size(); left++) {
-
-            for (int right = 0; right < ls.size(); right++) {
-
-                if (!(ls.contains(ls.get(right).substring(0, 1) + ls.get(left).substring(1))) &&
-                        !(ls.contains(ls.get(left).substring(0, 1) + ls.get(right).substring(1)))) {
-                    ans++;
+        Set<String>[] suffixes=new Set[26];
+        for (int i = 0; i < 26; i++) {
+            suffixes[i]=new HashSet<>();
+        }
+        for(String idea:ideas){
+            suffixes[idea.charAt(0)-'a'].add(idea.substring(1));
+        }
+        long pairs=0;
+        for (int i = 0; i < 26; i++) {
+            for (int j = i+1; j < 26; j++) {
+                int overlapping=0;
+                for(String suffix:suffixes[i]){
+                    if(suffixes[j].contains(suffix)){
+                        overlapping++;
+                    }
                 }
-
+                pairs+= (long) (suffixes[i].size() - overlapping) *(suffixes[j].size()-overlapping)*2;
             }
         }
-        return ans;
+        return pairs;
     }
 
     public static void main(String[] args) {

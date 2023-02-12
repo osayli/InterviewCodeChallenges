@@ -65,7 +65,7 @@ public class HQ2306NamingACompany {
                         overlapping++;
                     }
                 }
-                pairs+= (long) (suffixes[i].size() - overlapping) *(suffixes[j].size()-overlapping)*2;
+                pairs+=(suffixes[i].size()-overlapping)*(suffixes[j].size()-overlapping)*2;
             }
         }
         return pairs;

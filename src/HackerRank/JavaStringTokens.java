@@ -54,7 +54,7 @@ public class JavaStringTokens {
         //Scanner scanner=new Scanner(System.in);
         //String s=scanner.nextLine();
         String s="He is a very very good boy, isn't he?";
-        if(s.isBlank()){
+        if(s.isEmpty()){
             System.out.println(0);
         }else{
             String[] tokens=s.trim().split("[ !,?._'@]+");

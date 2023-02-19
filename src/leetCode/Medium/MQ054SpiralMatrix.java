@@ -29,19 +29,35 @@ n == matrix[i].length
  */
 public class MQ054SpiralMatrix {
     public static List<Integer> spiralOrder(int[][] matrix) {
+        List<Integer> spiral=new ArrayList<>();
+        int left=0,right=matrix[0].length;
+        int top=0,bottom=matrix.length;
 
-     int row=matrix.length, col=matrix[0].length;
-     int capacity=row*col;
-     int x=0,y=0;
-     List<Integer> spiral=new ArrayList<>();
-        for (int i = 0; i < capacity; i++) {
+        while(left<right &&top<bottom){
+            //get every element in top row
+            for (int i = left; i <right ; i++) {
+              spiral.add(matrix[top][i]);
+            }
+            top++;
+            for (int i = top; i <bottom ; i++) {
+               spiral.add(matrix[i][right-1]);
+            }
+            right--;
 
+            if(!(left<right &&top<bottom)){
+                break;
+            }
+            for (int i = right-1; i >=left ; i--) {
+                spiral.add(matrix[bottom-1][i]);
+            }
+            bottom--;
+
+            for (int i = bottom-1; i >= top; i--) {
+                spiral.add(matrix[i][left]);
+            }
+            left++;
         }
-
-
-
-     return spiral;
-
+        return spiral;
     }
 
     public static void main(String[] args) {

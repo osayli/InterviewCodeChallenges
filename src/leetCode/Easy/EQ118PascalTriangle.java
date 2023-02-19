@@ -24,7 +24,6 @@ Output: [[1]]
      */
 
     public static List<List<Integer>> generate(int numRows) {
-     List<List<Integer>> result=new ArrayList<>();
         List<Integer> row=new ArrayList<>();
         List<List<Integer>> rows=new ArrayList<>();
 

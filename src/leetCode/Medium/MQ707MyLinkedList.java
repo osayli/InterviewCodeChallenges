@@ -49,47 +49,77 @@ Constraints:
 Please do not use the built-in LinkedList library.
 At most 2000 calls will be made to get, addAtHead, addAtTail, addAtIndex and deleteAtIndex.
  */
-public class MyLinkedList {
-    int length=0;
-    ListNode dummy=new ListNode(0);
-    private class ListNode {
+class MQ707MyLinkedList {
+    private class ListNode{
         int val;
         ListNode next;
-        public ListNode(int val) {
-            this.val = val;
-            this.next = null;
+        public ListNode(int val){
+            this.val=val;
+            this.next=null;
+
         }
     }
 
-    public int get(int index) {
-     if(index<0||index>=length)
-         return -1;
-     ListNode curr=dummy.next;
-        for (int i = 0; i < length; i++)
-          curr=curr.next;
-          return curr.val;
+    public int get(int index){
+        if(index<0||index>=length)
+            return -1;
+        ListNode curr=dummy.next;
+        for(int i=0;i<index;i++)
+            curr=curr.next;
+        return curr.val;
     }
 
-    public void addAtHead(int val) {
-        ListNode head=new ListNode(val);
+    public void addAtHead(int val){
+        ListNode head=dummy.next;
+        ListNode node=new ListNode(val);
+        node.next=head;
+        dummy.next=node;
+        ++length;
     }
 
-    public static void addAtTail(int val) {
-
+    public void addAtTail(int val){
+        ListNode curr=dummy;
+        while(curr.next!=null)
+            curr=curr.next;
+        curr.next=new ListNode(val);
+        ++length;
     }
 
-    public void addAtIndex(int index, int val) {
-
-
+    public void addAtIndex(int index,int val){
+        if(index>length)
+            return;
+        ListNode curr=dummy;
+        for(int i=0;i<index;i++)
+            curr=curr.next;
+        ListNode cache=curr.next;
+        ListNode node=new ListNode(val);
+        node.next=cache;
+        curr.next=node;
+        ++length;
     }
 
-    public void deleteAtIndex(int index) {
-
+    public void deleteAtIndex(int index){
+        if(index<0||index>=length)
+            return;
+        ListNode curr=dummy;
+        for(int i=0;i<index;i++)
+            curr=curr.next;
+        ListNode cache=curr.next;
+        curr.next=cache.next;
+        --length;
     }
+
+    int length=0;
+
+    ListNode dummy=new ListNode(0);
 
     public static void main(String[] args) {
-       MyLinkedList obj=new MyLinkedList();
+       MQ707MyLinkedList obj=new MQ707MyLinkedList();
        obj.addAtHead(1);
+        obj.addAtTail(3);
+        obj.addAtIndex(1,2);
+        obj.deleteAtIndex(1);
+        System.out.println(obj.get(1));
     }
 }
 

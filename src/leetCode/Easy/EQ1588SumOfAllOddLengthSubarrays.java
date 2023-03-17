@@ -34,14 +34,16 @@ Output: 66
  */
 public class EQ1588SumOfAllOddLengthSubarrays {
     public static int sumOddLengthSubarrays(int[] arr) {
-        int left=0,right=arr.length-1;
         int sum=0;
-        while(left<right) {
-           /* for (int i = left; i < r) {
-             sum+=arr[i];
-            }*/
+        int len=arr.length;
+        for (int i = 0; i < len; i++) {
+           int end=i+1;
+           int start=len-i;
+           int total=end*start;
+           int odd=(total+1)/2;
+           sum+=odd*arr[i];
         }
-        return 9;
+        return sum;
     }
 
     public static void main(String[] args) {

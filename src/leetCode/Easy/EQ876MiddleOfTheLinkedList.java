@@ -39,13 +39,6 @@ public class EQ876MiddleOfTheLinkedList {
         ListNode(int val){this.val=val;}
         ListNode(int val, ListNode next){this.val=val;this.next=next;}
 
-        public static void addAtTail(int val){
-            ListNode curr=dummy;
-            while(curr.next!=null)
-                curr=curr.next;
-            curr.next= new ListNode(val);
-            ++length;
-        }
     }
     public static ListNode middleNode(ListNode head) {
         ListNode slow=head;
@@ -58,18 +51,7 @@ public class EQ876MiddleOfTheLinkedList {
         return slow;
     }
 
-
-
-    static int length=0;
-
-    static ListNode dummy=new ListNode(0);
-
     public static void main(String[] args) {
-        ListNode head=new ListNode(1);
-        head.addAtTail(2);
-        head.addAtTail(3);
-        head.addAtTail(4);
-        head.addAtTail(5);
-        System.out.println(middleNode(head));
+
     }
 }

@@ -24,7 +24,7 @@ Constraints:
 1 <= nums.length <= 105
 0 <= nums[i] <= 105
  */
-public class EQ540SingleElementInASortedArray {
+public class MQ540SingleElementInASortedArray {
     public static int singleNonDuplicate(int[] nums) {
         if(nums.length==1)
             return nums[0];

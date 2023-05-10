@@ -54,10 +54,11 @@ Notice that the answer must be a substring, "pwke" is a subsequence and not a su
 
     public static void main(String[] args) {
 
-        System.out.println(lengthOfLongestSubstring("au"));
-        System.out.println(lengthOfLongestSubstring("abcabcbb"));
-        System.out.println(lengthOfLongestSubstring("bbbb"));
-        System.out.println(lengthOfLongestSubstring("pwwkew"));
-        System.out.println(lengthOfLongestSubstring(" "));
+       // System.out.println(lengthOfLongestSubstring("au"));
+        //System.out.println(lengthOfLongestSubstring("abcabcbb"));
+        //System.out.println(lengthOfLongestSubstring("bbbb"));
+      //  System.out.println(lengthOfLongestSubstring("pwwkew"));
+       // System.out.println(lengthOfLongestSubstring(" "));
+        System.out.println(lengthOfLongestSubstring("dvdf"));
     }
 }

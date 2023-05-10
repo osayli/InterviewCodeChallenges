@@ -37,7 +37,7 @@ Constraints:
 1 <= nums1[i], nums2[j] <= 105
 Both nums1 and nums2 are non-increasing.
  */
-public class EQ1855MaximumDistanceBetweenAPairOfValues {
+public class MQ1855MaximumDistanceBetweenAPairOfValues {
     public static int maxDistance(int[] nums1, int[] nums2) {
 
         int ans=0;

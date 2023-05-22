@@ -79,4 +79,4 @@ Employees.id = EmployeeUNI.id;
 
 SELECT unique_id, name
 FROM Employees
-LEFT JOIN EmployeeUNI USING (id)
+LEFT JOIN EmployeeUNI USING (id);

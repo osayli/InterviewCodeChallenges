@@ -20,7 +20,7 @@ public class EQ169MajorityElementMooreVotingAlg {
 
     public static void main(String[] args) {
 
-        int[] nums={3,3,9,7};
+        int[] nums={3,3,9};
         System.out.println(majorityElement(nums));
     }
 }

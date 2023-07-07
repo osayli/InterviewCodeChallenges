@@ -16,7 +16,7 @@ public class EQ001TwoSumHashMap {
         return new int[] {};
     }
 
-
+//example
     public static void main(String[] args) {
         int[] nums={3,2,4};
         int target=7;

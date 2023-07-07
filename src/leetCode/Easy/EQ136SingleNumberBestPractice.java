@@ -5,6 +5,7 @@ import java.util.Arrays;
 public class EQ136SingleNumberBestPractice {
 
     public static int singleNumber(int[] nums) {
+        //XOR operation
         return Arrays.stream(nums).reduce(0, (a, b) -> a ^ b);
     }
 
